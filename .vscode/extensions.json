@@ -1,0 +1,7 @@
+{
+  "recommendations": [
+    "sibiraj-s.vscode-scss-formatter",
+    "dbaeumer.vscode-eslint",
+    "bmewburn.vscode-intelephense-client"
+  ]
+}

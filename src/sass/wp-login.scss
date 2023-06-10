@@ -1,0 +1,68 @@
+@import "variables";
+
+body {
+  background: $brandColor_2
+}
+
+#login {
+  h1 a {
+    display: block;
+    width: 320px;
+    height: 120px;
+    margin: auto;
+    background-image: url($themeImgUrl+"logo-white.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: 10px;
+
+    &:focus,
+    &:focus-visible,
+    &:active {
+      border: 0 none;
+      box-shadow: none;
+      outline: none;
+    }
+  }
+
+  #loginform {
+    background: $baseColor_2;
+    color: $baseColor_1;
+    border-color: $brandColor_1;
+    border-radius: 10px
+  }
+
+  .message {
+    border-left: 4px solid $brandColor_1
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    border-color: $brandColor_2;
+    &:focus {
+      box-shadow: 0 0 2px $brandColor_2;
+    }
+  }
+
+  input[type="checkbox"] {
+    border-color: $brandColor_2;
+    &:focus {
+      box-shadow: 0 0 2px $brandColor_2
+    }
+  }
+
+
+  #wp-submit {
+    color: $brandColor_2;
+    background-color: $baseColor_2;
+    text-shadow: none;
+    box-shadow: none;
+    border-color: $brandColor_2;
+    padding: 4px 20px;
+
+    &:hover {
+      color: $baseColor_2;
+      background-color: $brandColor_2;
+      border-color: $brandColor_2
+    }
+  }
+}

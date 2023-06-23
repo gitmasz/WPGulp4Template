@@ -20,7 +20,7 @@ class LoginPageSetup
   {
     $this->css_file = dirname(__DIR__) . '\css\wp-login.min.css';
     if (file_exists($this->css_file)) {
-      echo '<style>' . file_get_contents($this->css_file) . '</style>';
+      echo '<link rel="stylesheet" href="' . get_stylesheet_directory_uri() . '/css/wp-login.min.css" type="text/css" media="all" />';
     }
   }
 

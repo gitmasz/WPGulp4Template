@@ -27,7 +27,7 @@ class StyleAndScriptSetup
 
   public function addThemeCSS()
   {
-    wp_enqueue_style('main', get_stylesheet_directory_uri() . '/css/main.min.css', false, '1.0.0', 'all');
+    wp_enqueue_style('main', get_stylesheet_directory_uri() . '/css/main.min.css', false, filemtime(get_stylesheet_directory() . '/css/main.min.css'), 'all');
   }
 
   public function removeBuildInJS()
@@ -38,6 +38,6 @@ class StyleAndScriptSetup
 
   public function addThemeJS()
   {
-    wp_enqueue_script('main', get_stylesheet_directory_uri() . '/js/main.min.js', false, '1.0.0', true);
+    wp_enqueue_script('main', get_stylesheet_directory_uri() . '/js/main.min.js', false, filemtime(get_stylesheet_directory() . '/js/main.min.js'), true);
   }
 }

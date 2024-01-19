@@ -25,6 +25,7 @@ const day = dateObj.getUTCDate()
 const zipVersion = '-' + year + '_' + month + '_' + day
 
 const filesPath = {
+  all_sass: ['./src/sass/**/*.scss'],
   sass: ['./src/sass/main.scss'],
   no_map_sass: ['./src/sass/wp-login.scss', './src/sass/preloader.scss'],
   js: ['./src/js/**/*.js'],
@@ -121,10 +122,8 @@ export function watch () {
     proxy: 'http://localhost/WordPress/',
     browser: 'firefox'
   })
-  gulp.watch(filesPath.sass, { usePolling: true }, gulp.series(sassTask)).on('change', browserSync.reload)
-  gulp.watch(filesPath.no_map_sass, { usePolling: true }, gulp.series(sassTask)).on('change', browserSync.reload)
+  gulp.watch(filesPath.all_sass, { usePolling: true }, gulp.series(sassTask)).on('change', browserSync.reload)
   gulp.watch(filesPath.js, { usePolling: true }, gulp.series(jsTask)).on('change', browserSync.reload)
-  gulp.watch(filesPath.no_map_js, { usePolling: true }, gulp.series(jsTask)).on('change', browserSync.reload)
   gulp.watch(filesPath.img, { usePolling: true }, gulp.series(imgTask)).on('change', browserSync.reload)
   gulp.watch(filesPath.webp, { usePolling: true }, gulp.series(imgTask)).on('change', browserSync.reload)
 }
